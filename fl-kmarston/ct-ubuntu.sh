@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 source <(curl -s https://raw.githubusercontent.com/fl-kmarston/ProxmoxVE/main/misc/build.func)
 
-# bash -c "$(wget -qLO - https://github.com/fl-kmarston/ProxmoxVE/raw/fl-kmarston/fl-kmarston/ubuntu.sh)"
+# bash -c "$(wget -qLO - https://github.com/fl-kmarston/ProxmoxVE/raw/fl-kmarston/fl-kmarston/ct-ubuntu.sh)"
 
 # Copyright (c) 2021-2024 tteck
 # Author: tteck (tteckster)
@@ -45,6 +45,7 @@ function update_script() {
 
 echo "Starting..."
 env
+read -rp "Paused"
 start
 env
 read -rp "Paused"
