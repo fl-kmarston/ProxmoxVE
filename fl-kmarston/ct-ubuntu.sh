@@ -10,11 +10,11 @@ source <(curl -s https://raw.githubusercontent.com/fl-kmarston/ProxmoxVE/main/mi
 
 # App Default Values
 echo -e "Loading..."
-APP="Ubuntu"
+APP="FOS"
 var_version=${var_version:-24.04}
 var_tags="os,km"
-var_cpu="1"
-var_ram="512"
+var_cpu="2"
+var_ram="1024"
 var_disk="2"
 var_os="ubuntu"
 
@@ -22,6 +22,8 @@ var_os="ubuntu"
 # App Output & Base Settings
 header_info "$APP"
 base_settings
+
+exit 0
 
 # Core
 variables
