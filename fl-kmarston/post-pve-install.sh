@@ -262,7 +262,7 @@ extra(){
     e=/usr/bin/vim.tiny
     echo "SELECTED_EDITOR=\"$e\"" >> $HOME/.selected_editor
 
-    if [ ! -f  ~/.ssh/id_rsa ]; then
+    if [ ! -f  /root/.ssh/id_rsa ]; then
         msg_error "Need an ssh key - you need to add to GitHub and to home pi authorized"
         ssh-keygen
     fi
