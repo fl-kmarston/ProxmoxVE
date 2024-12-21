@@ -1,0 +1,34 @@
+root = true
+
+[*]
+indent_style = space
+indent_size = 4
+# end_of_line = lf
+trim_trailing_whitespace = true
+insert_final_newline = true
+charset = utf-8
+
+[*.yaml]
+indent_size = 2
+
+[*.md]
+end_of_line = lf
+trim_trailing_whitespace = false
+
+[*.css]
+end_of_line = lf
+[*.js]
+end_of_line = lf
+[*.py]
+end_of_line = lf
+indent_size = 4
+
+[*.sh]
+end_of_line = lf
+indent_size = 4
+
+[Makefile]
+indent_style = tab
+
+[rules]
+indent_style = tab

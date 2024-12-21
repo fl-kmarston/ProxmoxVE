@@ -1,0 +1,15 @@
+{
+    "recommendations": [
+        "timonwong.shellcheck",
+        "ms-python.python",
+        "ms-python.debugpy",
+        "EditorConfig.EditorConfig",
+        "chrischinchilla.vscode-pandoc",
+        "charliermarsh.ruff",
+        "ms-python.mypy-type-checker",
+        "hangxingliu.vscode-systemd-support",
+        "aaron-bond.better-comments",
+        "Gruntfuggly.todo-tree",
+        "streetsidesoftware.code-spell-checker"
+    ]
+}
