@@ -240,20 +240,20 @@ extra(){
         msg_info "install etckeeper"
         apt-get install -y etckeeper
     fi
-    if [[ ! -d /etc/.git ]]; then
+    if [ ! -d /etc/.git ]; then
         msg_error "Need to setup etckeeper"
     fi
     if ! systemctl is-active --quiet fail2bin; then
         msg_info "install fail2ban"
         apt-get install -y fail2ban
-        if [[ ! -f /etc/fail2ban/jail.local ]]; then
+        if [ ! -f /etc/fail2ban/jail.local ]; then
             echo -e "[sshd]\nbackend=systemd\nenabled=true" | tee /etc/fail2ban/jail.local
         fi
         msg_info "Enabling fail2ban"
         systemctl enable -q --now fail2ban
     fi
     # git config core.editor vim
-    if [[ -f ~/.gitconfig ]]; then
+    if [ ! -f ~/.gitconfig ]; then
         msg_info "Set git default"
         echo -e "[user]\n\tname = Keith Marston\n\temail = keith.marston@fluenceenergy.com\n\n[init]\n\tdefaultBranch = main\n"
     fi
@@ -262,7 +262,7 @@ extra(){
     e=/usr/bin/vim.tiny
     echo "SELECTED_EDITOR=\"$e\"" >> $HOME/.selected_editor
 
-    if [[ -f ~/.ssh/id_rsa.pub ]]; then
+    if [ ! -f ~/.ssh/id_rsa.pub ]; then
         msg_error "Need an ssh key - you need to add to GitHub and to home pi authorized"
         ssh-keygen
     fi
