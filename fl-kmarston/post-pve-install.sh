@@ -253,7 +253,7 @@ extra(){
         systemctl enable -q --now fail2ban
     fi
     # git config core.editor vim
-    if [ ! -f ~/.gitconfig ]; then
+    if [ ! -f /root/.gitconfig ]; then
         msg_info "Set git default"
         echo -e "[user]\n\tname = Keith Marston\n\temail = keith.marston@fluenceenergy.com\n\n[init]\n\tdefaultBranch = main\n"
     fi
