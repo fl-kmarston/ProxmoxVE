@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# Run from shell with:
+# bash -c "$(wget -qLO - https://github.com/community-scripts/ProxmoxVE/raw/fl-kmarston/fl-kmarston/post-pve-install.sh)"
+
+
 # Copyright (c) 2021-2024 tteck
 # Author: tteck (tteckster)
 # License: MIT
@@ -244,6 +248,10 @@ extra(){
         fi
         msg_info "Enabling fail2ban"
         systemctl enable -q --now fail2ban
+    fi
+    git config core.editor vim
+    if [[ ! -f ~/.gitconfig ]]; then
+        echo -e "[user]\n\tname = Keith Marston\n\temail = keith.marston@fluenceenergy.com\n\n[init]\n\tdefaultBranch = main\n"
     fi
 }
 
